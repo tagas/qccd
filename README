@@ -1,0 +1,73 @@
+
+
+This repository is part of the supplementary material for the paper:
+“Nonparametric Quantile-Based Causal Discovery”
+
+
+Set working directory to setwd("~/qccd_code/R")
+The file ~R/cd_utils.R contains a wrapper around our causal discovery method.
+
+CONTENTS
+———————————————————
+
+qccd_code/
+├── R/ 
+│   ├── cd_utils.R
+│   ├── multivariate_qccd.R
+│   ├── plots/
+│   │   ├── auc_roc_pr_plot.R
+│   │   └── spider_plots.R
+│   ├── run_benchmarks/
+│      	├── ANHNMN-benchmark.R
+│      	├── SIM-benchmark.R
+│      	└── Tubeningen_benchmark.R
+│   
+├── README
+├── data
+│   ├── ANHNMN_pairs/
+│   │   ├── AN
+│   │   ├── AN-s
+│   │   ├── HN
+│   │   ├── HN-s
+│   │   ├── MN-G
+│   │   └── MN-U
+│   │      
+│   ├── SIM_pairs/ 
+│   │   ├── SIM
+│   │   ├── SIM-G 
+│   │   ├── SIM-c
+│   │   └── SIM-ln
+│   │      
+│   └── tuebingen_benchmark/
+│     
+├── generators
+│   ├── auto_gen.R
+│   └── data_generators.R
+├── qccd_code.Rproj (start-up for the R project)
+└── results
+
+
+EXAMPLES
+———————————————————
+See R/run_benchmarks for examples.
+
+
+PACKAGES REQUIRED
+———————————————————
+install.packages(“rvinecopulib”)
+install.packages(“acepack”)
+install.packages(“statmod”)
+install.packages(“readr”)
+install.packages(“tnagler”)
+install.packages(“igraph”)
+install.packages(“pcalg”)
+install.packages(“ggraph”)
+install.packages(“ROCR”)
+install.packages(“PRROC”)
+
+
+
+
+
+
+
