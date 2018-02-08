@@ -64,7 +64,7 @@ QCCDwrap <- function(X, Y){
 }
 
 
-# code for reading in data pairs is borrowed from 
+# code for reading in the real data pairs is borrowed from 
 # Marx, A. and Vreeken, J. Telling Cause from Effect using MDL-based Local and Global Regression.
 # In ICDM, 2017
 uv = c(1:51,56:70,72:104,106)

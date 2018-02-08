@@ -24,9 +24,6 @@ corr[ref.uv$V6 == cds] = 1
 print("Correct causal directions recovered:")
 print(sum(corr))
 
-print("Weighted accuracy:")
-print(sum(QCCD_Tueb$Correct*meta$V6[uv])/sum(meta$V6[uv]))
-
 resQCCD = data.frame(Correct = corr, Eps = eps, Cds = cds, T = time)
 write.table(resQCCD, file = "../results/QCCD_Tueb.tab", row.names = F, quote = F, sep="\t")
 
