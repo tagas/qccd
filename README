@@ -1,73 +1,54 @@
-
-
 This repository is part of the supplementary material for the paper:
 “Nonparametric Quantile-Based Causal Discovery”
 
-
-Set working directory to setwd("~/qccd_code/R")
-The file ~R/cd_utils.R contains a wrapper around our causal discovery method.
-
-CONTENTS
-———————————————————
-
-qccd_code/
-├── R/ 
-│   ├── cd_utils.R
-│   ├── multivariate_qccd.R
-│   ├── plots/
-│   │   ├── auc_roc_pr_plot.R
-│   │   └── spider_plots.R
-│   ├── run_benchmarks/
-│      	├── ANHNMN-benchmark.R
-│      	├── SIM-benchmark.R
-│      	└── Tubeningen_benchmark.R
-│   
-├── README
-├── data
-│   ├── ANHNMN_pairs/
-│   │   ├── AN
-│   │   ├── AN-s
-│   │   ├── HN
-│   │   ├── HN-s
-│   │   ├── MN-G
-│   │   └── MN-U
-│   │      
-│   ├── SIM_pairs/ 
-│   │   ├── SIM
-│   │   ├── SIM-G 
-│   │   ├── SIM-c
-│   │   └── SIM-ln
-│   │      
-│   └── tuebingen_benchmark/
-│     
-├── generators
-│   ├── auto_gen.R
-│   └── data_generators.R
-├── qccd_code.Rproj (start-up for the R project)
-└── results
-
+The file R/qccd.R contains an implementation of our causal discovery method.
 
 EXAMPLES
 ———————————————————
-See R/run_benchmarks for examples.
+See R/benchmark-xyz for examples.
+Benchmarks can be run from root directory.
 
+
+CONTENTS
+———————————————————
+.
+|-- R
+|   |-- baselines
+|   |   |-- GRAN_EMD
+|   |   `-- Slope
+|   |       |-- Slope.R
+|   |       |-- resit
+|   |-- baselines.R
+|   |-- benchmark-ANLSMN.R
+|   |-- benchmark-SIM.R
+|   |-- benchmark-Tuebingen.R
+|   |-- generate-ANLSMN-data.R
+|   |-- qccd.R
+|   `-- utils
+|       |-- data_generators.R
+|       `-- read_tueb.R
+|-- README
+|-- code.Rproj
+|-- data
+|   |-- ANLSMN_pairs
+|   |   |-- AN
+|   |   |-- AN-s
+|   |   |-- LS
+|   |   |-- LS-s
+|   |   `-- MN-U
+|   |-- SIM_pairs
+|   |   |-- SIM
+|   |   |-- SIM-G
+|   |   |-- SIM-c
+|   |   `-- SIM-ln
+|   `-- tuebingen_benchmark
+`-- results
 
 PACKAGES REQUIRED
 ———————————————————
-install.packages(“rvinecopulib”)
-install.packages(“acepack”)
-install.packages(“statmod”)
-install.packages(“readr”)
-install.packages(“tnagler”)
-install.packages(“igraph”)
-install.packages(“pcalg”)
-install.packages(“ggraph”)
-install.packages(“ROCR”)
-install.packages(“PRROC”)
-
-
-
-
-
+install.packages(c("rvinecopulib", "statmod")) # for QCCD
+install.packages("MASS") # for the data generators
+install.packages(c("CAM", "Hmisc", "np", "energy", "data.table", 
+                   "boot", "energy", "gptk", "clue")) # for the baselines
 
 
